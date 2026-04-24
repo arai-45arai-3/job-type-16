@@ -29,7 +29,7 @@ function showPage() {
     const pageQuestions = questions.slice(start, end);
 
     // 進捗表示の更新
-    progress.textContent = `進捗: ${end} / ${questions.length}`;
+    progress.textContent = `進捗: ${start} / ${questions.length}`;
 
     // 質問とボタンの生成
     pageQuestions.forEach((q, index) => {
@@ -175,9 +175,9 @@ function goToDetailPage() {
     // タイプの判定
     const type = [
         totalScores.L >= totalScores.F ? "L" : "F",
-        totalScores.A >= totalScores.R ? "C" : "S",
-        totalScores.C >= totalScores.I ? "O" : "H",
-        totalScores.T >= totalScores.H ? "E" : "I"
+        totalScores.C >= totalScores.S ? "C" : "S",
+        totalScores.O >= totalScores.H ? "O" : "H",
+        totalScores.E >= totalScores.I ? "E" : "I"
     ].join('');
 
     console.table(totalScores);
