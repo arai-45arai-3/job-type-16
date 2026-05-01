@@ -2,9 +2,10 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ジョブタイプ診断</title>
+    
+    <title>JobType16</title>
 </head>
 <body class="container">
     <header class="site-header">
@@ -22,40 +23,86 @@
 
         <nav class="nav" id="js-nav">
             <ul>
-                <li><a href="index.html">診断をはじめる</a></li>
+                <li><a href="test.html">診断をはじめる</a></li>
                 <li><a href="list.html">16タイプ解説</a></li>
             </ul>
         </nav>
     </header>
     <div class="header-margin"></div>
-
+    
     <main class="app-container">
-        <h1 style="color: #004e5a;">ジョブタイプ診断</h1>
-        
-        <div id="question-container">
-            <div class="progress-container">
-                <div id="progress-txt"></div>
-                <progress id="progress-bar"></progress>
-            </div>
-            
-            
-            <div id="questions-page"></div>
 
-            <div class="button-container">
-                <button id="prev-btn" class="nextback-btn prev-btn-style">前のページへ</button>
-                <button id="next-btn" class="nextback-btn next-btn-style">次のページへ</button>
+    <section class="guide-section">
+        <h2>8つのワークスタイル指標</h2>
+        <p>この診断では、4つの軸からあなたの特性を分析します。</p>
+
+        <div class="table">
+            <!-- 軸1 -->
+            <div class="style-row">
+                <div class="style-cell left">
+                    <span class="code">L</span>
+                    <span class="label">先導 (Lead)</span>
+                    <p>リーダーとして組織を牽引する</p>
+                </div>
+                <div class="style-arrow">⇔</div>
+                <div class="style-cell right">
+                    <span class="code">F</span>
+                    <span class="label">支援 (Follow)</span>
+                    <p>実務で組織を支える</p>
+                </div>
+            </div>
+
+            <!-- 軸2 -->
+            <div class="style-row">
+                <div class="style-cell left">
+                    <span class="code">C</span>
+                    <span class="label">継続 (Constant)</span>
+                    <p>コツコツと着実に取り組む</p>
+                </div>
+                <div class="style-arrow">⇔</div>
+                <div class="style-cell right">
+                    <span class="code">S</span>
+                    <span class="label">瞬発 (Spurt)</span>
+                    <p>短期集中で一気に取り組む</p>
+                </div>
+            </div>
+
+            <!-- 軸3 -->
+            <div class="style-row">
+                <div class="style-cell left">
+                    <span class="code">O</span>
+                    <span class="label">成果 (Outcome)</span>
+                    <p>目標達成や成果を最優先する</p>
+                </div>
+                <div class="style-arrow">⇔</div>
+                <div class="style-cell right">
+                    <span class="code">H</span>
+                    <span class="label">調和 (Harmony)</span>
+                    <p>周囲との調和や関係性を重視する</p>
+                </div>
+            </div>
+
+            <!-- 軸4 -->
+            <div class="style-row">
+                <div class="style-cell left">
+                    <span class="code">E</span>
+                    <span class="label">外的 (External)</span>
+                    <p>報酬や評価などの外的動機で動く</p>
+                </div>
+                <div class="style-arrow">⇔</div>
+                <div class="style-cell right">
+                    <span class="code">I</span>
+                    <span class="label">内的 (Internal)</span>
+                    <p>興味や探求心などの内的動機で動く</p>
+                </div>
             </div>
         </div>
-        <div id="result-area" style="display: none;">
-            <h2 id="result-text"></h2>
-        </div>
+    </section>
 
-        
+    <a href="test.html" class="nextback-btn">診断をする</a>
 
-        
     </main>
-    <script src="./js/data.js"></script>
-    <script src="./js/script.js"></script>
+
     <script src="./js/common.js"></script>
 </body>
 </html>

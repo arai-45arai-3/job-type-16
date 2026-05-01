@@ -14,6 +14,70 @@
     color: #333;
 }
 
+/*トップページ*/
+.guide-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.style-row {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.style-cell {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.style-cell.left { background-color: #f0faff; } 
+.style-cell.right { background-color: #fffaf0; } 
+
+.style-arrow {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.code {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00BCD4;
+    margin-bottom: 5px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.style-cell p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+
+
+/*トップページ*/
+
+
 /* ラベルを両端に配置 */
 /* 同意する同意しない */
 .label-container {
@@ -246,7 +310,6 @@ progress::-moz-progress-bar {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .result-card {
@@ -301,7 +364,7 @@ progress::-moz-progress-bar {
 /* 長所・短所のグリッドレイアウト */
 .sw-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 横並び */
+    grid-template-columns: 1fr 1fr; 
     gap: 20px;
     margin-bottom: 30px;
 }
@@ -468,6 +531,15 @@ progress::-moz-progress-bar {
 @media(max-width: 768px){
     .app-container{
         padding: 2px;
+    }
+
+    .style-row {
+        flex-direction: column; /* スマホでは縦に並べる */
+    }
+    .style-vs {
+        padding: 5px 0;
+        background: #eee;
+        width: 100%;
     }
 
     .label-container {
