@@ -26,9 +26,7 @@ const resultArea    = document.getElementById('result-area');
 function showPage() {
     //画面の書き換え
     questionPage.innerHTML = '';
-    const start = currentStep * questionsPerPage;
-    const end   = Math.min(start + questionsPerPage, questions.length);
-    const pageQuestions = questions.slice(start, end);
+    //質問の順番
     const questionOrder = [24, 44, 6, 47, 30, 50, 36, 41, 52, 7, 
         17, 48, 35, 40, 54, 55, 31, 21, 11, 43, 
         51, 8, 28, 14, 29, 22, 23, 5, 42, 38, 
@@ -36,10 +34,20 @@ function showPage() {
         13, 15, 9, 45, 27, 34, 49, 19, 4, 56, 
         16, 46, 3, 2, 20, 32, ];
 
+    //並べ替え
+    const sortedQuestions = questionOrder.map(id => {
+        return questions.find(q => q.id === id);
+    });
+
+    const start = currentStep * questionsPerPage;
+    const end   = Math.min(start + questionsPerPage, sortedQuestions.length);
+    const pageQuestions = sortedQuestions.slice(start, end);
+
+
     // 進捗表示の更新
-    progressTxt.textContent = `進捗: ${start} / ${questions.length}`;
+    progressTxt.textContent = `進捗: ${start} / ${sortedQuestions.length}`;
     progress.value = start;
-    progress.max = questions.length;
+    progress.max = sortedQuestions.length;
 
 
     // 質問とボタンの生成
